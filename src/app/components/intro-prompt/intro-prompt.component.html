@@ -1,0 +1,5 @@
+<div id="intro-prompt-container">
+  <p class="prompt-text">{{ displayText }}<span class="blink-caret" *ngIf="!promptComplete"></span></p>
+  <input type="text" id="hidden-input" (keydown)="handleKeydown($event)"  class="centered-input" >
+  <p class="user-input">{{ userInput }}</p>
+</div>
