@@ -1,0 +1,58 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  .background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(61, 59, 59);
+    opacity: 0.5;
+    transition: opacity 1s ease;
+    z-index: -1;
+  }
+  
+  .grid {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle, #333 1px, transparent 3px), radial-gradient(circle, #333 1px, transparent 1px);
+    background-size: 50px 50px, 50px 50px;
+    background-position: 0 0, 25px 25px;
+    animation: moveGrid 5s linear infinite;
+    z-index: -1;
+    overflow: hidden,
+  }
+  
+  @keyframes moveGrid {
+    from {
+      transform: translate(0, 0);
+    }
+    to {
+      transform: translate(-50px, -50px);
+    }
+  }
+  
+.homepage-container {
+    width: 100%;
+    overflow: hidden;
+}
+
+#background-video {
+    position: absolute;
+    z-index: -10000;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+}
+

@@ -1,0 +1,67 @@
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: hsla(0, 2%, 30%, 0.6); 
+    opacity: 1;
+    visibility: hidden;
+    z-index: 1000;
+  }
+  
+  .loading-screen.show {
+    visibility: visible;
+  }
+  
+  .loading-image {
+    width: 200px; 
+    height: auto;
+  }
+  
+  .loading-title {
+    margin-top: 10px;
+    font-size: 24px; 
+    font-family: 'Pixelify Sans', sans-serif;
+  }
+  
+  .loading-bars {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 400px; 
+  }
+  
+  .loading-bar {
+    width: 0;
+    height: 10px; 
+    background-color: #ff00ff; /* Adjust color as needed */
+    animation: stretch 4.5s forwards;
+  }
+  
+  @keyframes stretch {
+    to {
+      width: 100%;
+    }
+  }
+  
+  @keyframes fadeOut {
+    from {
+      opacity: 1;
+    }
+    to {
+      opacity: 0;
+    }
+  }
+  
+  .fade-out {
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 1.5s ease-in-out, visibility 1.5s ease-in-out;
+  }
+  
