@@ -1,11 +1,12 @@
 import { Component, AfterViewInit, ElementRef, ViewChild, HostListener } from '@angular/core';
 import { LoadingScreenComponent } from '../../components/loading-screen/loading-screen.component';
 import { NavBarComponent } from '../../components/nav-bar/nav-bar.component';
+import { FiletreeWindowComponent } from '../../components/filetree-window/filetree-window.component';
 
 @Component({
   selector: 'app-home-page',
   standalone: true,
-  imports: [LoadingScreenComponent,NavBarComponent],
+  imports: [LoadingScreenComponent,NavBarComponent,FiletreeWindowComponent],
   templateUrl: './home-page.component.html',
   styleUrls: ['./home-page.component.css']
 })
@@ -21,6 +22,7 @@ export class HomePageComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     this.homeTheme.nativeElement.volume = 0.2;
+    (window as any).homeThemeAudio = this.homeTheme.nativeElement
     this.animateParallax();
   }
 

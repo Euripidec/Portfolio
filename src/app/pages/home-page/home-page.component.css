@@ -1,12 +1,4 @@
-body, html {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
-    overflow: hidden;
-  }
-  
-  .background {
+.background {
     position: absolute;
     top: 0;
     left: 0;
@@ -15,7 +7,7 @@ body, html {
     background: rgb(61, 59, 59);
     opacity: 0.5;
     transition: opacity 1s ease;
-    z-index: -1;
+    z-index: 1;
   }
   
   .grid {
@@ -28,7 +20,7 @@ body, html {
     background-size: 50px 50px, 50px 50px;
     background-position: 0 0, 25px 25px;
     animation: moveGrid 5s linear infinite;
-    z-index: -1;
+    z-index: 2;
     overflow: hidden;
     transition: background-position 0.1s ease-out; /* Smoother transition */
   }

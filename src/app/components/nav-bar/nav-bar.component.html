@@ -1,4 +1,8 @@
-<div class="nav-bar">
-    <img id="logo" src="../../../assets/icons/emblem.png" alt="Logo">
+<div class="nav-bar" #navbar>
+  <img src="../../../assets/icons/emblem.png" alt="Logo" class="nav-logo">
+  <div class="nav-content">
+    <span class="nav-item" id="visitors-count"> Daemons logged : {{ visitorsCount }}</span>
+    <button class="nav-item mute-button" (click)="toggleMute()">🔊</button>
+    <span class="nav-item" id="datetime"></span>
   </div>
-  
+</div>
