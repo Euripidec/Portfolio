@@ -1,0 +1,14 @@
+.nav-bar {
+    background-color: rgb(92, 44, 49);
+    height: 50px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    z-index: 100;
+  }
+  
+  #logo {
+    height: 30px; /* Adjust according to the desired size */
+    transition: transform 0.5s cubic-bezier(0.68, -0.55, 0.27, 1.55); /* Springy animation */
+  }
+  

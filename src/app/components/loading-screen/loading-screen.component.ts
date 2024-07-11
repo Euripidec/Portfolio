@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 
 @Component({
   selector: 'app-loading-screen',
@@ -10,6 +10,8 @@ import { Component, OnInit, ElementRef, ViewChild, AfterViewInit } from '@angula
 })
 export class LoadingScreenComponent implements OnInit, AfterViewInit {
   @ViewChild('loadingSound') loadingSound!: ElementRef<HTMLAudioElement>;
+  @Output() loadingFinished = new EventEmitter<void>();
+  @ViewChild('loadingContainer') loadingContainer!: ElementRef;
   isLoading = true;
 
   ngOnInit(): void {
@@ -21,6 +23,7 @@ export class LoadingScreenComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit() {
       this.muteHomePageAudio();
+      this.loadingContainer.nativeElement.style.opacity = '1';
     }
 
   showLoadingScreen() {
@@ -64,4 +67,8 @@ export class LoadingScreenComponent implements OnInit, AfterViewInit {
       homeAudio.muted = false;
     }
   }
+
+  
+
+  
 }

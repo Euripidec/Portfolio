@@ -1,10 +1,18 @@
 <div class="loading-screen" *ngIf="isLoading">
-    <img src="../../../assets/icons/emblem.png" alt="Loading Image" class="loading-image">
-    <h1 class="loading-title">RAVENS' NEST</h1>
-    <div class="loading-bars">
-      <div class="loading-bar"></div>
-      <div class="loading-bar"></div>
-    </div>
-    <audio #loadingSound src="../../../assets/sounds/loading-complete.mp4" preload="auto" muted></audio>
+  <img
+    src="../../../assets/icons/emblem.png"
+    alt="Loading Image"
+    class="loading-image"
+  />
+  <h1 class="loading-title">RAVENS' NEST</h1>
+  <div class="loading-bars">
+    <div class="loading-bar"></div>
+    <div class="loading-bar"></div>
   </div>
-  
+  <audio
+    #loadingSound
+    src="../../../assets/sounds/loading-complete.mp4"
+    preload="auto"
+    muted
+  ></audio>
+</div>
