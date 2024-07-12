@@ -1,30 +1,69 @@
 .vs-code-window {
-    position: absolute;
-    top: 8%;
-    left: 0.5%;
-    width: 400px;
-    height: 91%;
-    background: rgba(34, 34, 34, 0.5);
-    border-radius: 10px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    opacity: 0;
-    transform: scale(0.5);
-    animation: pop-up 1s forwards;
-    z-index: 100;
+  position: absolute;
+  top: 8vh; /* 8% of viewport height */
+  left: 0.5vw; /* 0.5% of viewport width */
+  width: 15vw; /* 25% of viewport width */
+  height: 91.5vh; /* 91% of viewport height with some margin for smaller screens */
+  background: rgba(34, 34, 34, 0.5);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  opacity: 0;
+  transform: scale(0.5);
+  animation: pop-up 1s forwards;
+  z-index: 100;
+}
+
+@keyframes pop-up {
+  to {
+    opacity: 1;
+    transform: scale(1);
   }
-  
-  @keyframes pop-up {
-    to {
-      opacity: 1;
-      transform: scale(1);
-    }
+}
+
+.terminal-content {
+  padding: 2vw; /* Responsive padding */
+  color: white;
+  font-family: 'Pixelify Sans', Courier, monospace;
+}
+
+/* Media queries for smaller screens */
+@media (max-width: 1200px) {
+  .vs-code-window {
+    width: 35vw; /* Adjust width for smaller screens */
+    height: 80vh; /* Adjust height for smaller screens */
+    top: 5vh; /* Adjust top margin */
+    left: 1vw; /* Adjust left margin */
   }
   
   .terminal-content {
-    padding: 20px;
-    color: white;
-    font-family: 'Pixelify Sans', Courier, monospace;
+    padding: 3vw; /* Adjust padding */
+  }
+}
+
+@media (max-width: 768px) {
+  .vs-code-window {
+    width: 45vw; /* Further adjust width for smaller screens */
+    height: 75vh; /* Further adjust height for smaller screens */
+    top: 5vh; /* Further adjust top margin */
+    left: 2vw; /* Further adjust left margin */
   }
   
+  .terminal-content {
+    padding: 4vw; /* Further adjust padding */
+  }
+}
+
+@media (max-width: 480px) {
+  .vs-code-window {
+    width: 90vw; /* Further adjust width for smaller screens */
+    height: 70vh; /* Further adjust height for smaller screens */
+    top: 10vh; /* Further adjust top margin */
+    left: 5vw; /* Further adjust left margin */
+  }
+  
+  .terminal-content {
+    padding: 5vw; /* Further adjust padding */
+  }
+}
