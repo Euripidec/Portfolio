@@ -26,44 +26,6 @@
   padding: 2vw; /* Responsive padding */
   color: white;
   font-family: 'Pixelify Sans', Courier, monospace;
+  font-size: 10px;
 }
 
-/* Media queries for smaller screens */
-@media (max-width: 1200px) {
-  .vs-code-window {
-    width: 35vw; /* Adjust width for smaller screens */
-    height: 80vh; /* Adjust height for smaller screens */
-    top: 5vh; /* Adjust top margin */
-    left: 1vw; /* Adjust left margin */
-  }
-  
-  .terminal-content {
-    padding: 3vw; /* Adjust padding */
-  }
-}
-
-@media (max-width: 768px) {
-  .vs-code-window {
-    width: 45vw; /* Further adjust width for smaller screens */
-    height: 75vh; /* Further adjust height for smaller screens */
-    top: 5vh; /* Further adjust top margin */
-    left: 2vw; /* Further adjust left margin */
-  }
-  
-  .terminal-content {
-    padding: 4vw; /* Further adjust padding */
-  }
-}
-
-@media (max-width: 480px) {
-  .vs-code-window {
-    width: 90vw; /* Further adjust width for smaller screens */
-    height: 70vh; /* Further adjust height for smaller screens */
-    top: 10vh; /* Further adjust top margin */
-    left: 5vw; /* Further adjust left margin */
-  }
-  
-  .terminal-content {
-    padding: 5vw; /* Further adjust padding */
-  }
-}

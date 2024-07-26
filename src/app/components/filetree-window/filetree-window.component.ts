@@ -1,4 +1,3 @@
-// vs-code-window.component.ts
 import { Component, AfterViewInit, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
@@ -13,11 +12,16 @@ export class FiletreeWindowComponent implements AfterViewInit {
   constructor() {}
 
   ngAfterViewInit() {
+    const asciiArt = `
+
+`;
+
     const data = [
-      { action: 'type', strings: ["npm install -g mimik^400"], output: '<span class="gray">+mimik@0.10.2 installed</span><br>&nbsp;', postDelay: 1000 },
-      { action: 'type', strings: ["cd tests^400"], output: ' ', postDelay: 1000 },
-      { action: 'type', strings: ['mimik run^400'], output: 'Executing mimik...', postDelay: 1000 },
-      { action: 'type', strings: ["that was easy!"], postDelay: 2000 }
+      { action: 'type', strings: ["===[OUROBOROS SYSTEMS TERMINAL]==="], output: ' ', postDelay: 500 },
+      { action: 'type', strings: ["===[CITY UNIT: MEGAFLOAT]==="], output: ' ', postDelay: 500 },
+      { action: 'type', strings: ['===[LOCATION: USEA]==='], output: 'Executing mimik...', postDelay: 500 },
+      { action: 'type', strings: ["that was easy!"], postDelay: 500 },
+      { action: 'type', strings: [asciiArt], postDelay: 500 }
     ];
 
     this.runScripts(data, 0);
@@ -42,7 +46,7 @@ export class FiletreeWindowComponent implements AfterViewInit {
         this.typeString(prompt, script.strings, 0, () => {
           let history = terminal.querySelector('.history').innerHTML;
           history = history ? history + '<br>' : '';
-          history += '$ ' + prompt.textContent;
+          history += '' + prompt.textContent;
           if (script.output) {
             history += '<br>' + script.output;
             prompt.innerHTML = '';
@@ -51,7 +55,7 @@ export class FiletreeWindowComponent implements AfterViewInit {
           pos++;
           setTimeout(() => {
             this.runScripts(data, pos);
-          }, script.postDelay || 1000);
+          }, script.postDelay || 500);
         });
         break;
     }
